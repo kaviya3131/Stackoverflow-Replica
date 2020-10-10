@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "681724596104",
+    "firebase_url": "https://techathon-33e61.firebaseio.com",
+    "project_id": "techathon-33e61",
+    "storage_bucket": "techathon-33e61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681724596104:android:70854fc4fcf46f661bf43d",
+        "android_client_info": {
+          "package_name": "com.example.techathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681724596104-honmau07pcl08su4hq4eid0uubvksq6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYdmGE9jd_hMQxP1UhBBlQiqeW26OBiE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681724596104-honmau07pcl08su4hq4eid0uubvksq6k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
