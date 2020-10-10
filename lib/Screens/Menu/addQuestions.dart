@@ -158,7 +158,7 @@ class _AddQuestionState extends State<AddQuestion> {
                                 prefixIcon: Padding(
                                   padding: EdgeInsets.only(top: 15, bottom: 10),
                                 ),
-                                hintText: 'Product name',
+                                hintText: 'A short line',
                                 hintStyle: TextStyle(color: Colors.black38),
                                 focusedBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(color: Colors.blue)),
@@ -208,7 +208,7 @@ class _AddQuestionState extends State<AddQuestion> {
                               prefixIcon: Padding(
                                 padding: EdgeInsets.only(top: 15, bottom: 10),
                               ),
-                              hintText: 'Describe your Product',
+                              hintText: 'Describe your Problem',
                               hintStyle: TextStyle(color: Colors.black38),
                               focusedBorder: UnderlineInputBorder(
                                   borderSide:
@@ -221,6 +221,7 @@ class _AddQuestionState extends State<AddQuestion> {
                           SizedBox(
                             height: 100.0,
                           ),
+                          Text('Tags', style: kFormTitleTextStyle),
                           InputTags(
                             autofocus: false,
                             keyboardType: TextInputType.text,

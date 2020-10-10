@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:techathon/Screens/Login/components/background.dart';
+import 'package:techathon/Screens/Menu/menu.dart';
 import 'package:techathon/Screens/Signup/signup_screen.dart';
 import 'package:techathon/components/already_have_an_account_acheck.dart';
 import 'package:techathon/components/rounded_button.dart';
@@ -46,7 +47,7 @@ class Body extends StatelessWidget {
                     MaterialPageRoute(
                     builder: (context)
                 {
-                  return AllQuestion();
+                  return Menu();
                 }
                   ),
                 );

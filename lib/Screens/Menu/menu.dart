@@ -7,6 +7,7 @@ import '../../constants.dart';
 import '../../constants.dart';
 import '../../constants.dart';
 import '../../constants.dart';
+import 'all questions.dart';
 
 
 class Menu extends StatefulWidget {
@@ -15,7 +16,7 @@ class Menu extends StatefulWidget {
 }
 
 final tabs = [
-  Container(color: Colors.white,),
+  AllQuestion(),
   Container(color: Colors.green,),
   Container(color: Colors.yellow,),
 ];
@@ -34,12 +35,7 @@ class _MenuState extends State<Menu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        leading: Icon(Icons.menu),
-        backgroundColor: kPrimaryColor,
-        title: Text('InHabitant',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontFamily: 'Viga'),),
-      ),
+
       floatingActionButton: FloatingActionButton(
         backgroundColor: kPrimaryColor,
         onPressed: (){
