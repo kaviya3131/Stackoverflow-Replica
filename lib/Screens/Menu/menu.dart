@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:techathon/Screens/Menu/addQuestions.dart';
 
 import '../../constants.dart';
 import '../../constants.dart';
@@ -42,6 +43,7 @@ class _MenuState extends State<Menu> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: kPrimaryColor,
         onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>AddQuestion()));
         },
         child: Icon(
           Icons.add,
