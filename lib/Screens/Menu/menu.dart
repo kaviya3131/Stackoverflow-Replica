@@ -1,11 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:techathon/Screens/Menu/addQuestions.dart';
+import 'package:techathon/Screens/Menu/profile.dart';
 
-import '../../constants.dart';
-import '../../constants.dart';
-import '../../constants.dart';
-import '../../constants.dart';
 import '../../constants.dart';
 import 'all questions.dart';
 
@@ -18,7 +15,7 @@ class Menu extends StatefulWidget {
 final tabs = [
   AllQuestion(),
   Container(color: Colors.green,),
-  Container(color: Colors.yellow,),
+  Profile()
 ];
 class _MenuState extends State<Menu> {
   int _currentIndex = 0;

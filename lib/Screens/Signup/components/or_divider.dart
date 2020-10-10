@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:techathon/constants.dart';
+import 'package:techathon/constants.dart';
 
 class OrDivider extends StatelessWidget {
   @override

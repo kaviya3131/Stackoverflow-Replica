@@ -1,8 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_tags/input_tags.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:multi_image_picker/multi_image_picker.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../Widgets/simple_textstyle.dart';
 import '../../constants.dart';
 
@@ -13,8 +15,26 @@ class AddQuestion extends StatefulWidget {
   @override
   _AddQuestionState createState() => _AddQuestionState();
 }
-
+String  _id = '';
 class _AddQuestionState extends State<AddQuestion> {
+  getUserInfogetChats() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    _id = prefs.getString('id');
+    //print(Constants.myName);
+
+    setState(() {
+      _id = (prefs.getString('id') ?? '');
+      print(_id);
+    });
+  }
+  @override
+  void initState() {
+   setState(() {
+     getUserInfogetChats();
+   });
+    super.initState();
+  }
+  final _firestore = FirebaseFirestore.instance;
   List<String> _tags = [];
   double containerHeight = 310.0;
   List<Asset> images = List<Asset>();
@@ -223,24 +243,7 @@ class _AddQuestionState extends State<AddQuestion> {
                             autofocus: false,
                             keyboardType: TextInputType.text,
                             tags: _tags,
-                            suggestionsList: [
-                              "Type 1 Diabetes",
-                              "Type 2 Diabetes",
-                              "Gestational Diabetes",
-                              "Hemorrhoid",
-                              "Lupus",
-                              "Shingles",
-                              "Herpes",
-                              "Pneumonia",
-                              "HPV",
-                              "Fibromyalgia",
-                              "Scabies",
-                              "Bronchitis",
-                              "Strep Throat",
-                              "Shingles",
-                              "Kidney Stones",
-                              "Mouth Ulcer"
-                            ],
+                            suggestionsList: ["Flutter","IOS","Android","Machine Learning","AI","Depp Learning","Python","java","Js","C","C++"],
                             popupMenuBuilder: _popupMenuBuilder,
                             popupMenuOnSelected: (int id, String tag) {
                               switch (id) {
@@ -268,7 +271,7 @@ class _AddQuestionState extends State<AddQuestion> {
                             height: 15,
                           ),
                           GestureDetector(
-                            onTap: loadAssets,
+//                            onTap: loadAssets,
                             child: Container(
                               padding: EdgeInsets.all(5.0),
                               decoration: BoxDecoration(
@@ -304,13 +307,38 @@ class _AddQuestionState extends State<AddQuestion> {
                                   ],
                                   color: kPrimaryColor,
                                   borderRadius: BorderRadius.circular(15.0)),
-                              child: Center(
-                                  child: Text(
-                                    'Add Product',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold),
-                                  )),
+                              child: GestureDetector(
+                                onTap: (){
+                                  _firestore
+                                      .collection('questions').add({
+                                    'question': title,
+                                    'votes' : '0',
+                                    'answer': ' ',
+                                    'sender' : _id,
+                                    'description': description,
+                                    'tags': _tags,
+                                  });
+
+                                  _firestore
+                                      .collection(_id).add({
+                                    'question': title,
+                                    'votes' : '0',
+                                    'answer': ' ',
+                                    'sender' : _id,
+                                    'description': description,
+                                    'tags': _tags,
+                                  });
+
+                                  Navigator.pop(context);
+                                },
+                                child: Center(
+                                    child: Text(
+                                      'Add Product',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold),
+                                    )),
+                              ),
                             ),
                           ),
                         ],

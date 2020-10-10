@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:techathon/Screens/Login/login_screen.dart';
+import 'package:techathon/Screens/Menu/menu.dart';
 import 'package:techathon/Screens/Signup/signup_screen.dart';
 import 'package:techathon/Screens/Welcome/components/background.dart';
 import 'package:techathon/components/rounded_button.dart';
 import 'package:techathon/constants.dart';
 import 'package:flutter_svg/svg.dart';
+import '../../Widgets/simple_textstyle.dart';
+
 
 class Body extends StatelessWidget {
   @override
@@ -53,6 +56,20 @@ class Body extends StatelessWidget {
                   ),
                 );
               },
+            ),
+            SizedBox(height: 15,),
+            GestureDetector(
+              onTap: (){
+                Navigator.pushReplacement(context, MaterialPageRoute(
+                    builder: (context) => Menu()
+                ));
+
+              },
+              child: Text(
+                "Sign In as Guest!",
+                  style:signin_uptextstyle()
+                //style: TextStyle(fontWeight: FontWeight.bold),
+              ),
             ),
           ],
         ),
