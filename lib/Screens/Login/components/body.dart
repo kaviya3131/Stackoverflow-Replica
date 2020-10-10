@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:techathon/Screens/Login/components/background.dart';
+import 'package:techathon/Screens/Menu/menu.dart';
 import 'package:techathon/Screens/Signup/signup_screen.dart';
 import 'package:techathon/components/already_have_an_account_acheck.dart';
 import 'package:techathon/components/rounded_button.dart';
@@ -39,7 +40,9 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "LOGIN",
-              press: () {},
+              press: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> Menu()));
+              },
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(

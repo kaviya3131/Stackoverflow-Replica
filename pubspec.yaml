@@ -53,9 +53,24 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
-assets:
-  - assets/images/
-  - assets/icons/
+  assets:
+    - assets/images/
+    - assets/icons/
+  fonts:
+    - family: KumbhSans
+      fonts:
+        - asset: fonts/KumbhSans-Regular.ttf
+    - family: Ubuntu
+      fonts:
+        - asset: fonts/Ubuntu-Regular.ttf
+
+    - family: Viga
+      fonts:
+        - asset: fonts/Viga-Regular.ttf
+
+    - family: CarterOne
+      fonts:
+        - asset: fonts/CarterOne-Regular.ttf
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
