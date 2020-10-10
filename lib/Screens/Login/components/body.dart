@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:techathon/Screens/Login/components/background.dart';
-import 'package:techathon/Screens/Menu/menu.dart';
 import 'package:techathon/Screens/Signup/signup_screen.dart';
 import 'package:techathon/components/already_have_an_account_acheck.dart';
 import 'package:techathon/components/rounded_button.dart';
 import 'package:techathon/components/rounded_input_field.dart';
 import 'package:techathon/components/rounded_password_field.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:techathon/Screens/menu/all questions.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -41,7 +41,15 @@ class Body extends StatelessWidget {
             RoundedButton(
               text: "LOGIN",
               press: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> Menu()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                    builder: (context)
+                {
+                  return AllQuestion();
+                }
+                  ),
+                );
               },
             ),
             SizedBox(height: size.height * 0.03),
