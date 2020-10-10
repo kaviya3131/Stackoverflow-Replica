@@ -9,7 +9,7 @@ class AllQuestion extends StatefulWidget {
 }
 
 class _AllQuestionState extends State<AllQuestion> {
-  List <String> Questions = ['flutter','android','ios','app'];
+  List <String> Questions = ['flutter','android','ios'];
   @override
   Widget build(BuildContext context) {
     return Material(

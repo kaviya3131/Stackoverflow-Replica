@@ -3,12 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_tags/input_tags.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:multi_image_picker/multi_image_picker.dart';
-import 'package:techathon/Widgets/simple_textstyle.dart';
+import '../Widgets/simple_textstyle.dart';
 import '../../constants.dart';
-import '../../constants.dart';
-import '../../constants.dart';
-import '../../constants.dart';
-import '../../constants.dart';
+
 
 
 
