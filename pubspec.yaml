@@ -32,6 +32,7 @@ dependencies:
   firebase_auth: ^0.18.0+1
   cloud_firestore: ^0.14.0+2
   shared_preferences: ^0.5.10
+  flutter_svg: ^0.19.0
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +48,27 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - image/
+    - assets/images/
+    - assets/icons/
+
+
+  fonts:
+    - family: KumbhSans
+      fonts:
+        - asset: fonts/KumbhSans-Regular.ttf
+    - family: Ubuntu
+      fonts:
+        - asset: fonts/Ubuntu-Regular.ttf
+
+    - family: Viga
+      fonts:
+        - asset: fonts/Viga-Regular.ttf
+
+    - family: CarterOne
+      fonts:
+        - asset: fonts/CarterOne-Regular.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:
